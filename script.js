@@ -19,4 +19,9 @@ hover.forEach((sqr) => {
     });
 });
 
+const gridSize = document.querySelector('#size');
+gridSize.addEventListener('click', getPrompt)
 
+function getPrompt() {
+    return alert(prompt("Enter a grid size - Max: 100"))
+}
