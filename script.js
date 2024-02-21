@@ -1,11 +1,15 @@
 const container = document.querySelector('#container');
-container.setAttribute('style', 'border: solid; width: 640px; height: 640px; display: flex');
+container.setAttribute('style', 'display: flex; flex-flow: row wrap; max-width: 640px');
 
 
 //create div
 
-const square = document.createElement('div');
-square.classList.toggle('grid-square');
-square.setAttribute('style', 'border: solid; width: 40px; height: 40px');
+for (let i=0; i< 255; i++){
+    const square = document.createElement('div');
+    square.classList.toggle('grid-square');
+    square.setAttribute('style', 'border: 1px solid grey; width: 40px; height: 40px;');
 
-container.appendChild(square);
+    container.appendChild(square);
+    
+}
+
