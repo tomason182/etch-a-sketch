@@ -14,7 +14,10 @@ for (let i=0; i< 255; i++){
 
 const hover = document.querySelectorAll('.grid-square');
 hover.forEach((sqr) => {
-    sqr.addEventListener('mousemove', () => {alert("touch a square");});
+    sqr.addEventListener('mousemove', () => {
+        sqr.classList.toggle('grid-hover')
+        sqr.setAttribute('style', 'border: 1px solid grey; width: 40px; height: 40px; background-color: black')
+    });
 });
 
 
