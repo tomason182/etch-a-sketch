@@ -9,7 +9,12 @@ for (let i=0; i< 255; i++){
     square.classList.toggle('grid-square');
     square.setAttribute('style', 'border: 1px solid grey; width: 40px; height: 40px;');
 
-    container.appendChild(square);
-    
+    container.appendChild(square);    
 }
+
+const hover = document.querySelectorAll('.grid-square');
+hover.forEach((sqr) => {
+    sqr.addEventListener('mousemove', () => {alert("touch a square");});
+});
+
 
