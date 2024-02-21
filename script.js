@@ -16,6 +16,7 @@ button.addEventListener('click', ()=> {
 
 function handleSizeInput(sizeInput){
     normalSize = 16;
+    
     if (sizeInput === undefined){
         gridSize = normalSize;
     }else{
