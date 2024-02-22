@@ -20,12 +20,16 @@ function handleSizeInput(sizeInput){
     if (sizeInput === undefined){
         gridSize = normalSize;
     }else{
-        gridSize = (normalSize*sizeInput);
+        gridSize = sizeInput;
     }    
     blockSize = (640/gridSize)-2;
     numberOfIteration = Math.pow(gridSize, 2);
 
     const container = document.querySelector('#container');
+
+    const removeBlocks = document.querySelectorAll('.blocks');
+
+    removeBlocks.forEach((item) => item.remove());
 
 
     for (let i = 0; i < numberOfIteration; i++){
