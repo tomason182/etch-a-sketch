@@ -21,8 +21,9 @@ function handleSizeInput(sizeInput){
         gridSize = normalSize;
     }else{
         gridSize = sizeInput;
-    }    
-    blockSize = (640/gridSize)-2;
+    }   
+
+    blockSize = (960/gridSize)-2;
     numberOfIteration = Math.pow(gridSize, 2);
 
     const container = document.querySelector('#container');
@@ -34,8 +35,8 @@ function handleSizeInput(sizeInput){
 
     for (let i = 0; i < numberOfIteration; i++){
         const blocks = document.createElement('div');
-        blocks.classList.toggle('blocks')
-        blocks.setAttribute('style', `border: 1px solid black; width: ${blockSize}px; height: ${blockSize}px`)
+        blocks.classList.toggle('blocks');
+        blocks.setAttribute('style', `border: 1px solid black; width: ${blockSize}px; height: ${blockSize}px`);
         
         blocks.addEventListener('mouseover', () => {
             blocks.style.backgroundColor = 'black';
@@ -45,4 +46,4 @@ function handleSizeInput(sizeInput){
     }
 }
 
-handleSizeInput()
+handleSizeInput();
