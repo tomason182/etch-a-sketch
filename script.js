@@ -14,15 +14,16 @@ button.addEventListener('click', ()=> {
 })
 
 function randomColour() {
-    let hexa = ['1', '2', '3','4','5','6', '7','8','9','0','A','B','C','D','F'];
+
+    let hexa = ['1', '2', '3','4','5','6', '7','8','9','0','A','B','C','D','E','F'];
     let colours = [];
     for (let i=0; i<6; i++){
-        let b = Math.floor(Math.random(), 15)
-        colours[i] = hexa[b]
+        let b = Math.floor(Math.random() * 15);
+        colours[i] = hexa[b];
     }
 
+    return (`#${colours.join('')}`);
 }
-
 
 function handleSizeInput(sizeInput){
     normalSize = 16;
@@ -49,7 +50,7 @@ function handleSizeInput(sizeInput){
         blocks.setAttribute('style', `border: 1px solid black; width: ${blockSize}px; height: ${blockSize}px`);
         
         blocks.addEventListener('mouseover', () => {
-            blocks.style.backgroundColor = 'black';
+            blocks.style.backgroundColor = randomColour();
         });
         
         container.appendChild(blocks);
