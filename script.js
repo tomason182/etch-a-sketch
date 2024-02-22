@@ -13,6 +13,16 @@ button.addEventListener('click', ()=> {
     }    
 })
 
+function randomColour() {
+    let hexa = ['1', '2', '3','4','5','6', '7','8','9','0','A','B','C','D','F'];
+    let colours = [];
+    for (let i=0; i<6; i++){
+        let b = Math.floor(Math.random(), 15)
+        colours[i] = hexa[b]
+    }
+
+}
+
 
 function handleSizeInput(sizeInput){
     normalSize = 16;
